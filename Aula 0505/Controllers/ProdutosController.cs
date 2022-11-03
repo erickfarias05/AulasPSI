@@ -18,10 +18,6 @@ namespace PSI.Controllers
         // GET: Produtos
         public ActionResult Index()
         {
-            //var produtos =
-            //    context.Produtos.Include(c => c.Categoria).Include(f => f.Fabricante).
-            //    OrderBy(n => n.Nome);
-            //return View(produtos);
             return View(produtoServico.ObterProdutosClassificadosPorNome());
         }
 

@@ -1,9 +1,9 @@
 ﻿@model Modelo.Cadastros.Produto
-
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Visualizando os dados de um PRODUTO";
 }
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -12,7 +12,16 @@
             Alteração dos dados de um PRODUTO
         </div>
         <div class="panel-body">
-            @Html.Partial("~/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+            <div class="form-horizontal">
+                <h4>Produto</h4>
+                <hr />
+                @Html.Partial("~/Views/Produtos/_PartialEditContentPanel.cshtml", Model)
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Gravar alterações" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 }
